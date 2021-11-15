@@ -1,0 +1,184 @@
+% LaTeXplate v1.0.0 
+% https://github.com/Steeven9/LaTeXplate
+
+\documentclass[11pt]{scrartcl}
+\newcommand*\student[1]{\newcommand{\thestudent}{{#1}}}
+\newcommand*\shortstudent[1]{\newcommand{\theshortstudent}{{#1}}}
+\newcommand*\course[1]{\newcommand{\thecourse}{{#1}}}
+\newcommand*\courseshort[1]{\newcommand{\thecourseshort}{{#1}}}
+\newcommand*\assnumber[1]{\newcommand{\theassnumber}{{#1}}}
+\setcounter{secnumdepth}{4}
+
+%----------------------------------------------------------------------------------------
+%	STUDENT AND COURSE INFO - EDIT HERE!
+%----------------------------------------------------------------------------------------
+
+\student{Stefano Taillefert}
+\shortstudent{S. Taillefert}
+\course{Course name}
+\courseshort{CN}
+\assnumber{n}
+
+%----------------------------------------------------------------------------------------
+%	PACKAGES AND OTHER DOCUMENT CONFIGURATIONS
+%----------------------------------------------------------------------------------------
+
+\usepackage[utf8]{inputenc} % Required for inputting international characters
+\usepackage[T1]{fontenc} % Use 8-bit encoding
+\usepackage[sc]{mathpazo}
+\usepackage{caption, subcaption}
+\usepackage[hidelinks]{hyperref}
+\usepackage{inconsolata}
+\usepackage[svgnames,table]{xcolor}
+\usepackage{booktabs}
+\usepackage{boldline}
+\usepackage{soul}
+
+\usepackage[english]{babel} % English language hyphenation
+\usepackage{amssymb}
+\usepackage{amsmath}% Math packages
+\usepackage{listings} % Code listings, with syntax highlighting
+\usepackage{graphicx} % Required for inserting images
+\usepackage{float}
+
+\usepackage{courier} %% Sets font for listing as Courier.
+\usepackage{listings, xcolor}
+
+\lstset{
+tabsize = 4, %% set tab space width
+showstringspaces = false, %% prevent space marking in strings, string is defined as the text that is generally printed directly to the console
+numbers = left, %% display line numbers on the left
+commentstyle = \color{green}, %% set comment color
+keywordstyle = \color{blue}, %% set keyword color
+stringstyle = \color{red}, %% set string color
+rulecolor = \color{black}, %% set frame color to avoid being affected by text color
+basicstyle = \small \ttfamily , %% set listing font and size
+breaklines = true, %% enable line breaking
+numberstyle = \tiny,
+}
+
+%----------------------------------------------------------------------------------------
+%	DOCUMENT MARGINS
+%----------------------------------------------------------------------------------------
+
+\usepackage{geometry} % For page dimensions and margins
+\geometry{
+	paper=a4paper, 
+	top=2.5cm, % Top margin
+	bottom=3cm, % Bottom margin
+	left=3cm, % Left margin
+	right=3cm, % Right margin
+}
+\setlength\parindent{0pt}
+
+%----------------------------------------------------------------------------------------
+% BEGIN: Magic sauce
+\definecolor{bp-blue} {RGB}{  2, 103, 193}
+\definecolor{bp-green}{RGB}{ 35, 150, 127}
+\definecolor{bp-grey} {RGB}{145, 129, 117}
+
+\lstdefinestyle{bpstyle}{
+  literate={*}{*}1
+}\lstset{
+  basicstyle=\ttfamily,
+  breaklines=true,
+  captionpos=b,
+  columns=fullflexible,
+  commentstyle=\color{bp-grey},
+  mathescape=true,
+  % numbers=left,
+  numbersep=10pt,
+  showstringspaces=false,
+  stringstyle=\color{bp-green},
+  keywordstyle=\color{red},
+  style=bpstyle
+}
+\lstloadlanguages{java}
+\lstdefinestyle{bpstyle}{
+  literate={*}{*}1
+}
+\lstset{
+  style=bpstyle
+}
+% END: Magic sauce
+%----------------------------------------------------------------------------------------
+
+%----------------------------------------------------------------------------------------
+%	SECTION TITLES
+%----------------------------------------------------------------------------------------
+
+\usepackage{sectsty}
+\sectionfont{\vspace{6pt}\centering\normalfont\LARGE\scshape}
+\subsectionfont{\normalfont\Large\bfseries} % \subsection{} styling
+\subsubsectionfont{\normalfont\large\itshape} % \subsubsection{} styling
+\paragraphfont{\normalfont\scshape} % \paragraph{} styling
+
+%----------------------------------------------------------------------------------------
+%	HEADERS AND FOOTERS
+%----------------------------------------------------------------------------------------
+
+\usepackage{scrlayer-scrpage}
+\ofoot*{\pagemark} % Right footer
+\ifoot*{\theshortstudent} % Left footer
+\cfoot*{\thecourseshort \ assignment \theassnumber} % Centre footer
+
+%----------------------------------------------------------------------------------------
+%	TITLE SECTION
+%----------------------------------------------------------------------------------------
+
+\title{	
+    \vspace{-3cm} 
+    \begin{figure}[H]
+        \hspace{-2cm}
+    	\includegraphics[width=65mm]{usi-inf-logo.png}
+    \end{figure}
+    \vspace{2cm} 
+	\normalfont\large
+	\textsc{\thecourse}\\
+	\vspace{25pt}
+	\rule{\linewidth}{0.5pt}\\
+	\vspace{20pt}
+	{\huge Assignment \theassnumber}\\
+	\vspace{12pt}
+	\rule{\linewidth}{0.5pt}\\
+	\vspace{12pt}
+}
+
+\author{\LARGE \thestudent}
+
+\date{\normalsize\today}
+
+\begin{document}
+
+\maketitle
+
+%----------------------------------------------------------------------------------------
+%%	PROBLEMS - EDIT HERE
+%----------------------------------------------------------------------------------------
+
+% \begin{figure}[H]
+% 	\centering
+% 	\begin{subfigure}{0.5\textwidth}
+% 		\includegraphics[width=0.9\textwidth]{img/asd.jpg}
+% 		\caption{Asd}
+% 	\begin{subfigure}{0.5\textwidth}
+% 		\includegraphics[width=0.9\textwidth]{img/asd.jpg}
+% 		\caption{Asd}
+% 	\end{subfigure}
+% 	\label{fig:asd}
+% 	\caption{Asd}
+% \end{figure}
+
+% \begin{figure}[H]
+% 	\centering
+% 	\includegraphics[width=0.9\textwidth]{img/asd.jpg}
+% 	\label{fig:asd}
+% 	\caption{Asd}
+% \end{figure}
+
+\newpage
+\section{Introduction}
+
+    % TODO
+
+\end{document}

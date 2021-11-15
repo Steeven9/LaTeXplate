@@ -1,0 +1,22 @@
+# IDEs
+.idea/
+.vscode/
+.vs/
+
+# LaTeX
+*.log
+*.synctex.gz
+*.aux
+*.toc
+*.out
+*.bbl
+*.blg
+*.fls
+*.fdb_latexmk
+*.lof
+*.lot
+
+# System
+Thumbs.db
+desktop.ini
+.DS_Store
