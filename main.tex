@@ -1,4 +1,4 @@
-% LaTeXplate v1.0.0 
+% LaTeXplate v1.0.1
 % https://github.com/Steeven9/LaTeXplate
 
 \documentclass[11pt]{scrartcl}
@@ -72,7 +72,9 @@ numberstyle = \tiny,
 \setlength\parindent{0pt}
 
 %----------------------------------------------------------------------------------------
-% BEGIN: Magic sauce
+%	UNKNOWN MAGIC SAUCE
+%----------------------------------------------------------------------------------------
+
 \definecolor{bp-blue} {RGB}{  2, 103, 193}
 \definecolor{bp-green}{RGB}{ 35, 150, 127}
 \definecolor{bp-grey} {RGB}{145, 129, 117}
@@ -100,8 +102,6 @@ numberstyle = \tiny,
 \lstset{
   style=bpstyle
 }
-% END: Magic sauce
-%----------------------------------------------------------------------------------------
 
 %----------------------------------------------------------------------------------------
 %	SECTION TITLES
@@ -117,10 +117,15 @@ numberstyle = \tiny,
 %	HEADERS AND FOOTERS
 %----------------------------------------------------------------------------------------
 
-\usepackage{scrlayer-scrpage}
+\usepackage[
+  automark,
+  autooneside=false,
+  headsepline
+]{scrlayer-scrpage}
+\clearpairofpagestyles
+\ihead{\thestudent} % Left header
+\ohead{\thecourseshort\ assignment \theassnumber} % Right header
 \ofoot*{\pagemark} % Right footer
-\ifoot*{\theshortstudent} % Left footer
-\cfoot*{\thecourseshort \ assignment \theassnumber} % Centre footer
 
 %----------------------------------------------------------------------------------------
 %	TITLE SECTION
@@ -153,7 +158,7 @@ numberstyle = \tiny,
 \maketitle
 
 %----------------------------------------------------------------------------------------
-%%	PROBLEMS - EDIT HERE
+%%	PROBLEMS - EDIT HERE!
 %----------------------------------------------------------------------------------------
 
 % \begin{figure}[H]
@@ -165,20 +170,27 @@ numberstyle = \tiny,
 % 		\includegraphics[width=0.9\textwidth]{img/asd.jpg}
 % 		\caption{Asd}
 % 	\end{subfigure}
-% 	\label{fig:asd}
 % 	\caption{Asd}
+% 	\label{fig:asd}
 % \end{figure}
 
 % \begin{figure}[H]
 % 	\centering
 % 	\includegraphics[width=0.9\textwidth]{img/asd.jpg}
-% 	\label{fig:asd}
 % 	\caption{Asd}
+% 	\label{fig:asd}
 % \end{figure}
 
 \newpage
 \section{Introduction}
 
     % TODO
+
+
+\newpage
+\section{Content}
+
+    % TODO
+
 
 \end{document}
