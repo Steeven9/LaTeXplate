@@ -1,4 +1,4 @@
-% LaTeXplate v1.0.1
+% LaTeXplate v1.0.2
 % https://github.com/Steeven9/LaTeXplate
 
 \documentclass[11pt]{scrartcl}
@@ -33,19 +33,19 @@
 \usepackage{booktabs}
 \usepackage{boldline}
 \usepackage{soul}
-
 \usepackage[english]{babel} % English language hyphenation
 \usepackage{amssymb}
-\usepackage{amsmath}% Math packages
+\usepackage{amsmath} % Math packages
 \usepackage{listings} % Code listings, with syntax highlighting
 \usepackage{graphicx} % Required for inserting images
 \usepackage{float}
-
-\usepackage{courier} %% Sets font for listing as Courier.
+\usepackage{courier} % Sets font for listing as Courier.
 \usepackage{listings, xcolor}
 
+\usepackage{blindtext} % can be removed when writing
+
 \lstset{
-tabsize = 4, %% set tab space width
+tabsize = 2, %% set tab space width
 showstringspaces = false, %% prevent space marking in strings, string is defined as the text that is generally printed directly to the console
 numbers = left, %% display line numbers on the left
 commentstyle = \color{green}, %% set comment color
@@ -64,10 +64,10 @@ numberstyle = \tiny,
 \usepackage{geometry} % For page dimensions and margins
 \geometry{
 	paper=a4paper, 
-	top=2.5cm, % Top margin
-	bottom=2.5cm, % Bottom margin
-	left=3cm, % Left margin
-	right=3cm, % Right margin
+	total={170mm,257mm},
+	left=18mm,
+	top=20mm,
+	right=18mm,
 }
 \setlength\parindent{0pt}
 
@@ -104,16 +104,6 @@ numberstyle = \tiny,
 }
 
 %----------------------------------------------------------------------------------------
-%	SECTION TITLES
-%----------------------------------------------------------------------------------------
-
-\usepackage{sectsty}
-\sectionfont{\vspace{6pt}\centering\normalfont\LARGE\scshape}
-\subsectionfont{\normalfont\Large\bfseries} % \subsection{} styling
-\subsubsectionfont{\normalfont\large\itshape} % \subsubsection{} styling
-\paragraphfont{\normalfont\scshape} % \paragraph{} styling
-
-%----------------------------------------------------------------------------------------
 %	HEADERS AND FOOTERS
 %----------------------------------------------------------------------------------------
 
@@ -132,9 +122,9 @@ numberstyle = \tiny,
 %----------------------------------------------------------------------------------------
 
 \title{	
-    \vspace{-3cm} 
+    \vspace{-2.8cm} 
     \begin{figure}[H]
-        \hspace{-2cm}
+        \hspace{-1cm}
     	\includegraphics[width=65mm]{usi-inf-logo.png}
     \end{figure}
     \vspace{2cm} 
@@ -163,11 +153,12 @@ numberstyle = \tiny,
 
 % \begin{figure}[H]
 % 	\centering
-% 	\begin{subfigure}{0.5\textwidth}
-% 		\includegraphics[width=0.9\textwidth]{img/asd.jpg}
+% 	\begin{subfigure}{0.45\textwidth}
+% 		\includegraphics[width=0.9\textwidth]{asd.jpg}
 % 		\caption{Asd}
-% 	\begin{subfigure}{0.5\textwidth}
-% 		\includegraphics[width=0.9\textwidth]{img/asd.jpg}
+% 	\end{subfigure}
+% 	\begin{subfigure}{0.45\textwidth}
+% 		\includegraphics[width=0.9\textwidth]{asd.jpg}
 % 		\caption{Asd}
 % 	\end{subfigure}
 % 	\caption{Asd}
@@ -176,7 +167,7 @@ numberstyle = \tiny,
 
 % \begin{figure}[H]
 % 	\centering
-% 	\includegraphics[width=0.9\textwidth]{img/asd.jpg}
+% 	\includegraphics[width=0.9\textwidth]{asd.jpg}
 % 	\caption{Asd}
 % 	\label{fig:asd}
 % \end{figure}
@@ -184,13 +175,14 @@ numberstyle = \tiny,
 \newpage
 \section{Introduction}
 
-    % TODO
+	\Blindtext % placeholder
 
 
 \newpage
 \section{Content}
 
-    % TODO
+	\Blindtext % placeholder
+	\Blindtext % placeholder
 
 
 \end{document}
