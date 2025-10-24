@@ -1,4 +1,4 @@
-% LaTeXplate v1.0.4
+% LaTeXplate v1.0.5
 % https://github.com/Steeven9/LaTeXplate
 
 \documentclass[11pt]{scrartcl}
@@ -14,10 +14,9 @@
 %----------------------------------------------------------------------------------------
 
 \student{Stefano Taillefert}
-\shortstudent{S. Taillefert}
 \course{Course name}
 \courseshort{CN}
-\assnumber{n}
+\assnumber{1}
 
 %----------------------------------------------------------------------------------------
 %	PACKAGES AND OTHER DOCUMENT CONFIGURATIONS
@@ -41,8 +40,7 @@
 \usepackage{float}
 \usepackage{courier} % Sets font for listing as Courier.
 \usepackage{listings, xcolor}
-
-\usepackage{blindtext} % can be removed when writing
+\usepackage[htt]{hyphenat} % hyphenate texttt blocks
 
 \lstset{
 tabsize = 2, %% set tab space width
@@ -55,6 +53,18 @@ rulecolor = \color{black}, %% set frame color to avoid being affected by text co
 basicstyle = \small \ttfamily , %% set listing font and size
 breaklines = true, %% enable line breaking
 numberstyle = \tiny,
+}
+
+% Make texttt line-break
+\renewcommand{\texttt}[1]{%
+  \begingroup
+  \ttfamily
+  \begingroup\lccode`~=`/\lowercase{\endgroup\def~}{/\discretionary{}{}{}}%
+  \begingroup\lccode`~=`[\lowercase{\endgroup\def~}{[\discretionary{}{}{}}%
+  \begingroup\lccode`~=`.\lowercase{\endgroup\def~}{.\discretionary{}{}{}}%
+  \catcode`/=\active\catcode`[=\active\catcode`.=\active
+  \scantokens{#1\noexpand}%
+  \endgroup
 }
 
 %----------------------------------------------------------------------------------------
@@ -122,21 +132,23 @@ numberstyle = \tiny,
 %----------------------------------------------------------------------------------------
 
 \title{	
-    \vspace{-2.8cm} 
-    \begin{figure}[H]
-        \hspace{-1cm}
-    	\includegraphics[width=65mm]{usi-inf-logo.png}
-    \end{figure}
-    \vspace{2cm} 
+  \vspace{-2.8cm}
+  \begin{figure}[H]
+      \hspace{-1cm}
+    \includegraphics[width=65mm]{usi-inf-logo.png}
+  \end{figure}
+  \vspace{-0.2cm}
+
 	\normalfont\large
 	\textsc{\thecourse}\\
-	\vspace{25pt}
+	\vspace{0.1cm}
+
 	\rule{\linewidth}{0.5pt}\\
-	\vspace{20pt}
+	\vspace{0.4cm}
 	{\huge Assignment \theassnumber}\\
-	\vspace{12pt}
+	\vspace{0.2cm}
 	\rule{\linewidth}{0.5pt}\\
-	\vspace{12pt}
+  \vspace{-0.1cm}
 }
 
 \author{\LARGE \thestudent}
@@ -203,17 +215,15 @@ numberstyle = \tiny,
 %%	DOCUMENT - //TODO EDIT HERE!
 %----------------------------------------------------------------------------------------
 
-\newpage
 \section{Introduction}
 
-\Blindtext % placeholder
+Bla bla some text
 
 
 \newpage
 \section{Content}
 
-\Blindtext % placeholder
-\Blindtext % placeholder
+Bla bla other text
 
 
 \end{document}
